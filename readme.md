@@ -15,11 +15,11 @@ When what's needed is an atclone'' hook to e.g. install a software (plus atpull'
 # atpull"%atclone" :If the same command is used for installation and updating.
 
 # install uv
-zinit as"program" pick"uv" \
+zinit ice \
   atclone"curl -LsSf https://astral.sh/uv/install.sh | sh" \
   atpull"curl -LsSf https://astral.sh/uv/install.sh | sh" \
-  run-atpull \
-  for weineel/zinit-uv
+  run-atpull
+zinit light weineel/zinit-uv
 source $HOME/.local/bin/env
 # Added a zsh plugin that automatically executes source .venv/bin/activate when switching to a folder that has a .venv directory
 # Create a virtual environment using the `mkvenv` command
