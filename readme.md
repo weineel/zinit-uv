@@ -14,11 +14,12 @@ When what's needed is an atclone'' hook to e.g. install a software (plus atpull'
 # run-atpull：Even if this repository has not been updated, atpull will still be executed during `zinit update weineel/zinit-uv`.
 # atpull"%atclone" :If the same command is used for installation and updating.
 
-# Added a script that automatically executes `source .venv/bin/activate` when switching to a folder that has a `.venv` directory
-
+# install uv
 zinit as"program" pick"uv" \
   atclone"curl -LsSf https://astral.sh/uv/install.sh | sh" \
   atpull"curl -LsSf https://astral.sh/uv/install.sh | sh" \
   run-atpull \
   for weineel/zinit-uv
+# auto switch venv
+zinit wait lucid for MichaelAquilina/zsh-autoswitch-virtualenv
 ```
