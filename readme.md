@@ -21,6 +21,11 @@ zinit as"program" pick"uv" \
   run-atpull \
   for weineel/zinit-uv
 source $HOME/.local/bin/env
-# auto switch venv
-zinit wait lucid for MichaelAquilina/zsh-autoswitch-virtualenv
+# Added a zsh plugin that automatically executes source .venv/bin/activate when switching to a folder that has a .venv directory
+# Create a virtual environment using the `mkvenv` command
+# https://github.com/weineel/zinit-uv/blob/master/zsh-zinit-uv.plugin.zsh
+# Rely on uv and direnv
+
+# auto switch venv(WIP to support uv)
+# zinit wait lucid for MichaelAquilina/zsh-autoswitch-virtualenv
 ```
