@@ -63,10 +63,14 @@ EOF
     local envrc_content
     if [ -n "$python_version" ]; then
         envrc_content="[ -d .venv ] || uv venv --python $python_version
-source .venv/bin/activate"
+source .venv/bin/activate
+echo \"venv activated: \$(pwd)/.venv\"
+"
     else
         envrc_content="[ -d .venv ] || uv venv
-source .venv/bin/activate"
+source .venv/bin/activate
+echo \"venv activated: \$(pwd)/.venv\"
+"
     fi
 
     # Create or overwrite .envrc
