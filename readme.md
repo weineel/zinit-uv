@@ -20,6 +20,7 @@ zinit as"program" pick"uv" \
   atpull"curl -LsSf https://astral.sh/uv/install.sh | sh" \
   run-atpull \
   for weineel/zinit-uv
+source $HOME/.local/bin/env
 # auto switch venv
 zinit wait lucid for MichaelAquilina/zsh-autoswitch-virtualenv
 ```
